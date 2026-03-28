@@ -154,6 +154,11 @@ export const attendanceApi = apiSlice.injectEndpoints({
             }),
             invalidatesTags: ['Attendance', 'AttendanceReport', 'AttendanceSummary'],
         }),
+
+
+
+        //! The new for employee. 
+        
     }),
 });
 

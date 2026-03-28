@@ -385,7 +385,7 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
             key: "mark-attendance",
             icon: <UserCheck size={16} />,
             label: "Mark Attendance",
-            href: "/employee/mark-attendance",
+            href: "/admin/employee/mark-attendance",
           },
           {
             key: "attendance-history",
