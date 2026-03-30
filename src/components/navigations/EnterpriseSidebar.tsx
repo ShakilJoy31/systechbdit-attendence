@@ -331,8 +331,8 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
           {
             key: "company",
             icon: <Building2 size={16} />,
-            label: "Company Info",
-            href: "/admin/settings/company",
+            label: "IP Configuration",
+            href: "/admin/settings/ip-config",
           },
           {
             key: "holidays",

@@ -20,6 +20,20 @@ const baseQuery = fetchBaseQuery({
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery,
-  tagTypes: ["EmployeeSearch", "Employee", "EmployeeStats","Attendance", "AttendanceReport", "AttendanceSummary","MyAttendance",                     "Enterprise", "Supplier","SupplierStats","SupplierSearch", "Client", "File", "SMS", 'Audience', 'AudienceStats', 'SMSHistory', 'Payments', 'Payment'],
+  tagTypes: ["EmployeeSearch",
+    "Employee",
+    "EmployeeStats","Attendance",
+    "AttendanceReport",
+    "AttendanceSummary",
+    "MyAttendance",
+    "WifiIpConfigStats",
+    "WifiIpConfig",
+    "ActiveWifiIpConfig",
+                      
+    
+    
+    
+    
+    "Enterprise", "Supplier","SupplierStats","SupplierSearch", "Client", "File", "SMS", 'Audience', 'AudienceStats', 'SMSHistory', 'Payments', 'Payment'],
   endpoints: () => ({}),
 });
