@@ -112,6 +112,21 @@ export const employeeApi = apiSlice.injectEndpoints({
             }),
             providesTags: ['EmployeeSearch'],
         }),
+
+        // Change employee password - ADD THIS
+        changeEmployeePassword: builder.mutation<{ success: boolean; message: string }, {
+            id: string | number;
+            currentPassword: string;
+            newPassword: string;
+            confirmNewPassword: string;
+        }>({
+            query: ({ id, currentPassword, newPassword, confirmNewPassword }) => ({
+                url: `/employees/change-password/${id}`,
+                method: 'PUT',
+                body: { currentPassword, newPassword, confirmNewPassword },
+            }),
+            invalidatesTags: ['Employee'],
+        }),
     }),
 });
 
@@ -125,4 +140,5 @@ export const {
     useBulkImportEmployeesMutation,
     useGetEmployeeStatsQuery,
     useSearchEmployeesQuery,
+    useChangeEmployeePasswordMutation, // Add this export
 } = employeeApi;

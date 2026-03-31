@@ -93,6 +93,8 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
     fetchUser();
   }, [router]);
 
+  console.log(user)
+
   // Fetch enterprise data for brother-enterprise role
   const { data: enterpriseData, isLoading: isEnterpriseLoading } = useGetEnterpriseByIdQuery(
     user?.id || "",
@@ -222,12 +224,6 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
             icon: <AlertCircle size={16} />,
             label: "Leave Requests",
             href: "/admin/leave/requests",
-          },
-          {
-            key: "leave-balance",
-            icon: <Award size={16} />,
-            label: "Leave Balance",
-            href: "/admin/leave/balance",
           },
           {
             key: "leave-policies",
@@ -374,7 +370,7 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
         key: "dashboard",
         icon: <Home size={20} />,
         label: "Dashboard",
-        href: "/employee/dashboard",
+        href: "/admin/dashboard",
       },
       {
         key: "my-attendance",
@@ -412,19 +408,7 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
             label: "Leave History",
             href: "/employee/leave/history",
           },
-          {
-            key: "leave-balance",
-            icon: <Award size={16} />,
-            label: "Leave Balance",
-            href: "/employee/leave/balance",
-          },
         ],
-      },
-      {
-        key: "my-profile",
-        icon: <UserCog size={20} />,
-        label: "My Profile",
-        href: "/employee/profile",
       },
     ];
 
@@ -901,7 +885,7 @@ const EnterpriseSidebar: React.FC<EnterpriseSidebarProps> = ({
             </div>
 
             <Link
-              href={user?.role === "employee" ? "/employee/change-password" : "/admin/change-password"}
+              href={user?.role === "employee" ? "/admin/employee/change-password" : "/admin/change-password"}
               onClick={handleMobileClose}
               className={`flex items-center justify-between px-3 py-2.5 rounded-lg border text-gray-700 dark:text-gray-300 transition-colors group ${
                 pathname === '/admin/change-password' || pathname === '/employee/change-password'

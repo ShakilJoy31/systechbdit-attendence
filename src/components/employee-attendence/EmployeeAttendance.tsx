@@ -1075,7 +1075,7 @@ const EmployeeAttendance = () => {
                             <div className={`px-8 py-4 rounded-xl flex items-center justify-center gap-3 ${theme === 'dark' ? 'bg-gray-700 text-gray-400' : 'bg-gray-100 text-gray-500'
                                 }`}>
                                 <CheckCircle size={20} />
-                                Attendance Completed for {currentLocalDate}
+                                Attendance Completed
                             </div>
                         )}
                     </div>
