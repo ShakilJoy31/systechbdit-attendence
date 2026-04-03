@@ -18,7 +18,7 @@ export const appConfiguration: IConfigurationProps = {
   appName: "Tech element",
   appCode: "__t_beta__",
   // baseUrl: "http://localhost:2000",
-    baseUrl: "https://attendence-server.srsbuzz.com",
+    baseUrl: "https://attendence-server.linuxeon.com",
   databaseResetAPI:
     "null",
   favicon: "/iconic.png",
